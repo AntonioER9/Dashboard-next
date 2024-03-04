@@ -5,21 +5,17 @@ import { Todo } from '@prisma/client';
 import { revalidatePath } from 'next/cache';
 
 
-export const sleep = async (seconds: number = 0) => {
-
+export const sleep = async (seconds: number = 0) => { //ejemplo para el uso de useOptimistic
     return new Promise(resolve => {
         setTimeout(() => {
             resolve(true);
         }, seconds * 1000);
     });
-
 }
-
-
 
 export const toggleTodo = async (id: string, complete: boolean): Promise<Todo> => {
 
-    await sleep(3);
+    await sleep(3); //simular una conexión lenta.
 
     const todo = await prisma.todo.findFirst({ where: { id } });
 
