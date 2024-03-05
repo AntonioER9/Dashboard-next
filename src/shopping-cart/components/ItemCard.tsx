@@ -60,8 +60,6 @@ export const ItemCard = ({ product, quantity }: Props) => {
             Total: ${ (product.price * quantity).toFixed(2) }
           </span>
           
-
-
         </div>
 
 

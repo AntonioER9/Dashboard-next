@@ -31,7 +31,6 @@ export const ProductCard = ({ id, name, price, rating, image }:Props) => {
     router.refresh();
   }
 
-
   return (
     <div className="shadow rounded-lg max-w-sm bg-gray-800 border-gray-100">
       
@@ -53,7 +52,6 @@ export const ProductCard = ({ id, name, price, rating, image }:Props) => {
           </h3>
         </a>
         <div className="flex items-center mt-2.5 mb-5">
-          
 
           {/* Stars */}
           {
@@ -62,18 +60,15 @@ export const ProductCard = ({ id, name, price, rating, image }:Props) => {
             ))
           }
 
-
           {/* Rating Number */}
           <span className="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-800 ml-3">
             { rating.toFixed(2) }
           </span>
         </div>
 
-
         {/* Price and Add to Cart */}
         <div className="flex items-center justify-between">
           <span className="text-2xl text-white font-bold">${ price.toFixed(2) }</span>
-          
           <div className="flex">
             <button
               onClick={ onAddToCart }

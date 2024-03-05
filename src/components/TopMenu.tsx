@@ -1,17 +1,16 @@
 import { cookies } from 'next/headers';
 import Link from 'next/link';
-import { CiSearch, CiMenuBurger, CiChat1, CiBellOn, CiShoppingBasket } from 'react-icons/ci';
+import { CiSearch, CiMenuBurger, CiChat1, CiShoppingBasket } from 'react-icons/ci';
 
 
 const getTotalCount = (cart: { [id: string]: number }):number => {
   let items = 0;
-  Object.values( cart ).forEach( (value) => {
+  Object.values( cart ).forEach( (value) => { //contar los valores de un objeto (productos)
     items += value as number;
   })
 
   return items;
 }
-
 
 export const TopMenu = () => {
 
@@ -19,9 +18,6 @@ export const TopMenu = () => {
   const cart = JSON.parse( cookieStore.get('cart')?.value ?? '{}' );
 
   const totalItems = getTotalCount(cart);
-
-  
-
 
   return (
     <div className="sticky z-10 top-0 h-16 border-b bg-white lg:py-2.5">
