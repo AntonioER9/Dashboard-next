@@ -86,10 +86,7 @@ export const ProductCard = ({ id, name, price, rating, image }:Props) => {
                 <IoTrashOutline size={20} />
             </button>
           </div>
-          
         </div>
-
-
       </div>
     </div>
   )
