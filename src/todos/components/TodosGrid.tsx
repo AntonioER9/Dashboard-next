@@ -5,7 +5,7 @@ import { TodoItem } from "./TodoItem";
 
 import * as todosApi from '@/todos/helpers/todos';
 import { useRouter } from "next/navigation";
-import { toggleTodo } from "@/todos/actions/todo.actions";
+import { toggleTodo } from "@/todos/actions/todo-actions";
 
 
 interface Props {
